@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Membuat input grade menggunakan prompt</title>
+    </head>
+    <body>
+
+        <script>
+            var nilai = prompt("masukan nilai akhir")
+            if (nilai >= 95 && nilai < 101) {
+                alert("Grade anda adalah A")
+                grade = "A"
+            } else if (nilai >= 80 && nilai < 95) {
+                alert("Grade anda adalah B")
+                grade = "B"
+            } else if (nilai >= 75 && nilai < 80) {
+                alert("Grade anda adalah C")
+                grade = "C"
+            } else if (nilai >= 60 && nilai < 75) {
+                alert("Grade anda adalah D")
+                grade = "D"
+            } else if (nilai >= 40 && nilai < 60) {
+                alert("Grade anda adalah E")
+                grade = "E"
+            } else if(nilai >= 1 && nilai <40){
+                alert("Grade anda adalah F")
+                grade = "E"
+            } else {
+                alert("Nilai yang kamu masukan salah")
+                if (confirm("silahkan ulang kembali")){
+                    window.location.reload();   
+                }
+            }
+        </script>
+    </body>
+</html>

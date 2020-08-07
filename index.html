@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>membuat perhitungan 3 luas bangun datar menggunakan input</title>
+    </head>
+    <body>
+
+        <script>
+            var pilihan = prompt("persegi , persegi-panjang , jajar-genjang")
+            if (pilihan == "persegi") {
+
+                var sisi1 = parseInt(prompt("masukan nilai sisi pertama"));
+                while (isNaN(sisi1)) {
+                    alert('Nilai yang dimasukan harus angka');
+                    sisi1 = parseInt(prompt("masukan nilai sisi pertama"));
+                }
+
+                document.write("Sisi : ", sisi1)
+                document.write("<br>")
+
+                var sisi2 = parseInt(prompt("masukan nilai sisi kedua"))
+                while (isNaN(sisi2)) {
+                    alert('Nilai yang dimasukan harus angka');
+                    sisi2 = parseInt(prompt("masukan nilai sisi kedua"));
+                }
+
+                document.write("Sisi : ", sisi2)
+                document.write("<br>")
+
+                var luas = sisi1 * sisi2
+                document.write("Luas bangun :", luas)
+
+            } else if (pilihan == "persegi-panjang") {
+                var panjang = parseInt(prompt("masukan nilai panjang"))
+                while (isNaN(panjang)) {
+                    alert('Nilai yang dimasukan harus angka');
+                    panjang = parseInt(prompt("masukan nilai panjang"));
+                }
+
+                document.write("Panjang :", panjang)
+                document.write("<br>")
+
+                var lebar = parseInt(prompt("masukan nilai lebar"))
+                while (isNaN(lebar)) {
+                    alert('Nilai yang dimasukan harus angka');
+                    lebar = parseInt(prompt("masukan nilai lebar"))
+                }
+
+                document.write("Lebar :", lebar)
+                document.write("<br>")
+
+                var luas = panjang * lebar
+                document.write("Luas bangun :", luas)
+            } else if (pilihan == "jajar-genjang") {
+                var alas = parseInt(prompt("maskan nilai alas"))
+                while (isNaN(alas)) {
+                    alert('Nilai yang dimasukan harus angka');
+                    alas = parseInt(prompt("maskan nilai alas"))
+                }
+
+                document.write("alas :", alas)
+                document.write("<br>")
+
+                var tinggi = parseInt(prompt("masukan nilai tinggi"))
+                while (isNaN(tinggi)) {
+                    alert('Nilai yang dimasukan harus angka');
+                    tinggi = parseInt(prompt("masukan nilai tinggi"))
+                }
+
+                document.write("tinggi :", tinggi)
+                document.write("<br>")
+
+                var luas = alas * tinggi
+                document.write("Luas bangun :", luas)
+            } else {
+                alert('Bangun datar yang anda masukan salah')
+                if (confirm("Silahkan Masukan ulang"))
+                    window
+                        .location
+                        .reload();
+                }
+        </script>
+    </body>
+</html>
